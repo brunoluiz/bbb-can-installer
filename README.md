@@ -3,9 +3,10 @@
 NOTE: ALL SCRIPTS MUST BE EXECUTED AS ROOT (sudo SCRIPT) AND NEED INTERNET TO WORK!
 
 Installing SocketCAN tools and libsocketcan on your BeagleBone (reboot after each step):
-1. First update your kernel to 4.1, which supports capes and CAN. You can use other kernels too, like 3.14, but probably it will not support capes. For that use ```01-install-kernel.sh```
-2. Use ```02-install-dtc-overlays.sh``` to install device tree overlays for BBB (src: https://github.com/beagleboard/bb.org-overlays)
-3. Install the can-utils and the libsocketcan running ```03-install-utils.sh```
+
+1. First update your kernel to 4.1, which supports capes and CAN. You can use other kernels too, like 3.14, but probably it will not support capes. For that use ```01-install-kernel.sh```.
+2. Use ```02-install-dtc-overlays.sh``` to install device tree overlays for BBB (src: https://github.com/beagleboard/bb.org-overlays).
+3. Install the can-utils and the libsocketcan running ```03-install-utils.sh```.
 
 Using those 3 steps you be ready to use CAN on your BeagleBone. If you use some CAN cape, probably the system will load the correct device tree for that. To check it you can run ```dmesg | grep cape``` and check if it is loaded at ```cat /sys/devices/platform/bone_capemgr/slots``` (in some versions the path will be /sys/devices/bone_capemgr*/slots ).
 
