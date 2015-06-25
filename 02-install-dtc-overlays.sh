@@ -10,7 +10,6 @@ cd tmp
 
 pkgname=bb.org-overlays
 if [ ! -d $pkgname ]; then
-then
   echo "$pkgname folder does not exist... Downloading!"
   git clone https://github.com/beagleboard/bb.org-overlays
 fi
